@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.payment-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Metode Pembayaran */
+.payment-method {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.payment-method img {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.payment-method label {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.payment-method input[type="radio"] {
+    margin-left: 10px;
+}
+
+/* Pilihan Tips */
+.tips-options {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.tip-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tip-option {
+    background-color: #f4b400;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.tip-option:hover {
+    background-color: #e09b00;
+}
+
+.tip-option.active {
+    background-color: #e09b00;
+    font-weight: bold;
+}
+
+#selected-tip {
+    margin: 10px 0;
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+}
+
+/* Tombol Bayar */
+.pay-button {
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    padding: 12px;
+    background-color: #ffcc00;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.pay-button:hover {
+    background-color: #e6b800;
+}

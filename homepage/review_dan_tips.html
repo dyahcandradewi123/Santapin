@@ -1,104 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Reviews</title>
-    <link rel="stylesheet" href="review_dan_tips.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Product</title>
+  <link rel="stylesheet" href="review_dan_tips.css">
 </head>
 <body>
-    <header>
-        <h1>Restaurant Reviews</h1>
-    </header>
+  <div class="container">
+    <h1>Bakmie Sadja</h1>
 
-    <div class="container">
-        <!-- Review Form -->
-        <div class="review-form">
-            <h2>Submit Your Review for <span id="restaurant-name">Restaurant Mamacita</span></h2>
-            
-            <label for="menu-select">Choose a Menu Item:</label>
-            <select id="menu-select">
-                <option value="">Select a menu item</option>
-                <option value="Tacos">Tacos</option>
-                <option value="Burritos">Burritos</option>
-                <option value="Quesadilla">Quesadilla</option>
-            </select>
+    <!-- Form Tambah Review -->
+    <div class="review-form">
+      <h2>Tambahkan Review untuk Bakmie Sadja</h2>
+      <form id="review-form">
+        <label for="menu">Pilih Menu</label>
+        <input type="text" id="menu" name="menu" placeholder="Masukkan nama menu" required>
 
-            <div class="food-reviews">
-                <h2>Food Reviews</h2>
-            
-                <!-- Food 1 (Tacos) -->
-                <div class="food-item">
-                    <img src="images/tacos.jpg" alt="Tacos" class="food-img">
-                    <div class="food-review">
-                        <h3>Tacos</h3>
-                        <p>Rating: ★★★★☆</p>
-                        <p>Review: The tacos were delicious with a crispy shell and tasty fillings. Highly recommend!</p>
-                    </div>
-                </div>
-            
-                <!-- Food 2 (Burritos) -->
-                <div class="food-item">
-                    <img src="images/burritos.jpg" alt="Burritos" class="food-img">
-                    <div class="food-review">
-                        <h3>Burritos</h3>
-                        <p>Rating: ★★★☆☆</p>
-                        <p>Review: The burritos were okay, but the seasoning could be improved. A bit too salty for my taste.</p>
-                    </div>
-                </div>
-            
-                <!-- Food 3 (Quesadilla) -->
-                <div class="food-item">
-                    <img src="images/quesadilla.jpg" alt="Quesadilla" class="food-img">
-                    <div class="food-review">
-                        <h3>Quesadilla</h3>
-                        <p>Rating: ★★★★★</p>
-                        <p>Review: Absolutely loved the quesadilla! The cheese was melted perfectly, and the flavor was amazing!</p>
-                    </div>
-                </div>
-            </div>
-            
-
-            <!-- Star Rating -->
-            <div class="rating" id="star-rating">
-                <i class="fas fa-star" data-value="1"></i>
-                <i class="fas fa-star" data-value="2"></i>
-                <i class="fas fa-star" data-value="3"></i>
-                <i class="fas fa-star" data-value="4"></i>
-                <i class="fas fa-star" data-value="5"></i>
-            </div>
-
-            <!-- Review Text -->
-            <textarea id="review-text" rows="4" placeholder="Write your review here"></textarea>
-
-            <!-- Submit Button -->
-            <button id="submit-review">Submit Review</button>
+        <label for="rating">Rating</label>
+        <div class="stars" id="star-rating">
+          <span class="star" data-value="5">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="1">★</span>
         </div>
 
-        <!-- Display All Reviews -->
-        <div id="reviews-list">
-            <h2>All Reviews for <span id="restaurant-review-name">Restaurant Mamacita</span></h2>
-        </div>
+        <label for="review-text">Tulis Ulasan</label>
+        <textarea id="review-text" name="review-text" rows="4" placeholder="Tulis ulasan Anda" required></textarea>
 
-        <!-- Food Reviews Section -->
-        <div id="food-reviews">
-            <h2>Food Reviews</h2>
-            <div class="food-item">
-                <img src="images/tacos.jpg" alt="Tacos" class="food-img">
-                <div class="food-description" id="tacos-review"></div>
-            </div>
-            <div class="food-item">
-                <img src="images/burritos.jpg" alt="Burritos" class="food-img">
-                <div class="food-description" id="burritos-review"></div>
-            </div>
-            <div class="food-item">
-                <img src="images/quesadilla.jpg" alt="Quesadilla" class="food-img">
-                <div class="food-description" id="quesadilla-review"></div>
-            </div>
-        </div>
+        <button type="submit" class="submit-btn">Kirim</button>
+      </form>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Daftar Review -->
+    <div class="reviews-container">
+      <h2>Review Product (<span id="review-count">254</span>)</h2>
+      <div class="reviews" id="reviews-container">
+        <!-- Contoh Review -->
+        <div class="review-item">
+          <div class="review-header">
+            <div class="profile">
+              <img src="images/tanboy kun.jpeg" alt="Tanboy Kun" class="profile-pic">
+              <span>TANBOY KUN</span>
+            </div>
+            <div class="review-meta">
+              <span class="rating">★★★★★</span>
+              <span class="review-date">5 Mei 2024</span>
+            </div>
+          </div>
+          <p class="review-text">
+            GACORR! ENAK BANGET BAKMIE NYA, RECOMMENDED BANGET BUAT YANG LAGI MAMPIR DI MALANG. THE BEST LAH POKOKNYA
+          </p>
+          <div class="menu-info">
+            <img src="images/bakmie.jpg" alt="Bakmie Sadja" class="menu-pic">
+            <strong>Menu Pilihan Saya:</strong> Bakmie Sadja
+          </div>
+        </div>
+      </div>
+      <button id="tips-button" onclick="window.location.href='bayar_tips.html'">Beri Tips</button>
+    </div>
+  </div>
+
+  <script src="review_dan_tips.js"></script>
 </body>
 </html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pilih Metode Pembayaran</title>
+  <link rel="stylesheet" href="bayar_tips.css">
+</head>
+<body>
+  <div class="payment-container">
+    <h1>Pilih Metode Pembayaran</h1>
+    <form id="payment-form">
+      <!-- Metode Pembayaran -->
+      <div class="payment-method">
+        <img src="images/paypal.png" alt="Paypal">
+        <label>
+          <input type="radio" name="payment" value="Paypal"> Paypal
+        </label>
+      </div>
+      <div class="payment-method">
+        <img src="images/mastercard.png" alt="MasterCard">
+        <label>
+          <input type="radio" name="payment" value="MasterCard"> MasterCard
+        </label>
+      </div>
+      <div class="payment-method">
+        <img src="images/apple pay.png" alt="ApplePay">
+        <label>
+          <input type="radio" name="payment" value="ApplePay"> ApplePay
+        </label>
+      </div>
+      <div class="payment-method">
+        <img src="images/amazon.png" alt="Amazon">
+        <label>
+          <input type="radio" name="payment" value="Amazon"> Amazon
+        </label>
+      </div>
+
+      <!-- Pilihan Nominal Tips -->
+      <div class="tips-options">
+        <p>Pilih Nominal Tips:</p>
+        <div class="tip-buttons">
+          <button type="button" class="tip-option" data-tip="5000">Rp5.000</button>
+          <button type="button" class="tip-option" data-tip="10000">Rp10.000</button>
+          <button type="button" class="tip-option" data-tip="20000">Rp20.000</button>
+          <button type="button" class="tip-option" data-tip="30000">Rp30.000</button>
+          <button type="button" class="tip-option" data-tip="50000">Rp50.000</button>
+          <button type="button" class="tip-option" data-tip="100000">Rp100.000</button>
+        </div>
+      </div>
+      <p id="selected-tip">Nominal Tips: Rp0</p>
+
+      <!-- Tombol Bayar -->
+      <button type="submit" class="pay-button">Bayar</button>
+    </form>
+  </div>
+  <script src="bayar_tips.js"></script>
+</body>
+</html>
