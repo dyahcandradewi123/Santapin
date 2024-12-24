@@ -1,0 +1,123 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column; /* Ubah arah flex menjadi kolom (vertikal) */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px; /* Beri jarak antar elemen */
+}
+
+/* Header Styles */
+.header {
+  width: 100%; /* Header mengambil seluruh lebar */
+  background-color: #000; /* Warna latar belakang hitam */
+  padding: 50px 50px;
+  text-align: center; /* Pusatkan teks di dalam header */
+}
+
+header button {
+  position: absolute; /* Posisi absolut agar tombol berada tepat di tempat yang diinginkan */
+  top: 50%; /* Posisikan secara vertikal pada tengah header */
+  left: 10px; /* Melekat di sisi kiri */
+  transform: translateY(-50%); /* Koreksi agar tombol berada di tengah vertikal header */
+  background: none; /* Tidak ada background */
+  border: none; /* Tidak ada border */
+  font-size: 1.5rem;
+  cursor: pointer; /* Ubah kursor menjadi pointer */
+  color: #fff; /* Warna teks putih */
+}
+
+.header h1 {
+  font-size: 2rem; /* Ukuran font besar */
+  color: #fff; /* Warna teks putih */
+}
+
+/* Reservasi Container */
+.reservasi-container {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  display: flex;
+  flex-direction: column; /* Susun elemen secara vertikal */
+  align-items: center; /* Pusatkan elemen di tengah */
+}
+
+/* Reservasi Content */
+.reservasi-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 100%; /* Pastikan mengambil seluruh lebar container */
+}
+
+
+.reservasi-section {
+  width: 45%;
+}
+
+.reservasi-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Time Grid */
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.time-grid button {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.time-grid button:hover {
+  background-color: #f0f0f0;
+}
+
+.time-grid button.active {
+  background-color: #ffc107;
+  color: #fff;
+  border: none;
+}
+
+/* Next Button */
+.next-button {
+  background-color: #ffc107;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.next-button:hover {
+  background-color: #e0a800;
+}

@@ -1,0 +1,329 @@
+body {
+    font-family: 'Times New Roman', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background: #1c1c1c;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-weight: bold;
+}
+
+.navbar-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: #facc15;
+}
+
+.login-button {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.login-button:hover {
+    background: #facc15;
+    color: black;
+    border: 1px solid #facc15;
+}
+
+/* Hero Section */
+/* Search Section - Black Background */
+.search-section {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.search-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.search-bar {
+    display: inline-flex;
+    align-items: center;
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 0.25rem;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+}
+
+.search-bar button {
+    background: #facc15;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-size: 1.25rem;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background: #ffd54f;
+}
+
+.umkm-section {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+/* Memastikan tombol "Sarapan", "Jajanan", dan "Favorit" berada di bawah dan tengah */
+.filter-buttons {
+    display: flex;
+    justify-content: center; /* Tombol-tombol berada di tengah secara horizontal */
+    gap: 1rem;
+    margin-top: 1rem; /* Menambahkan jarak antara judul "Pilih UMKM" dan tombol */
+    flex-wrap: wrap; /* Menjaga tombol agar rapat */
+    justify-content: center; /* Tengah-kan tombol di halaman */
+    text-align: center; /* Agar tombol berada di tengah secara horizontal */
+    margin-bottom: 3rem; /* Menambah jarak antara tombol dan menu */
+}
+
+/* Agar kolom-kolom tombol rapat secara vertikal */
+.filter-buttons button {
+    background: white;
+    color: black;
+    border: 2px solid #ddd;
+    padding: 1rem 1rem;  /* Memperbesar padding agar tombol lebih besar */
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0.5rem;
+    font-size: 0.8rem;  /* Memperbesar ukuran font */
+    transition: background 0.3s, color 0.3s;
+}
+
+.filter-buttons button.active {
+    background: #facc15;
+    color: black;
+    border-color: #facc15;
+}
+
+.umkm-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.umkm-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+    gap: 80px; /* Memperbesar jarak antar elemen */
+    justify-content: center; /* Semua item ke tengah */
+}
+
+.umkm-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;  /* Menambah padding untuk memperbesar ruang di dalam kartu */
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Memastikan kartu menyesuaikan dengan kolom */
+}
+
+.umkm-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.umkm-card h4 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+    color: #333;
+}
+
+.umkm-card p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.umkm-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Top UMKM Section */
+.top-umkm {
+    padding: 1rem;  /* Mengurangi padding untuk membuat area lebih kecil */
+    margin-top: 2rem;     /* Jarak dari elemen sebelumnya */
+    border: none; 
+}
+
+.top-umkm h2 {
+    font-size: 2rem;  /* Mengurangi ukuran font judul untuk menyesuaikan */
+    margin-bottom: 1.5rem;
+}
+
+.top-umkm-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* Mengatur menjadi 2 kolom */
+    gap: 20px;  /* Memperbesar jarak antar elemen */
+    margin-top: 1.5rem;
+}
+
+.umkm {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;  /* Menjaga semua item teratur di sebelah kiri */
+    border: 1px solid #ddd;  /* Menyesuaikan border menjadi lebih tipis */
+    border-radius: 20px;  
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.umkm img {
+    width: 120px;  /* Ukuran gambar yang lebih kecil */
+    height: 120px;
+    object-fit: cover;
+    margin-right: 15px;  
+    border-radius: 8px;
+}
+.umkm-info {
+    padding: 10px;
+}
+
+.umkm-info h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.umkm-info p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1 1 200px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.footer-contact li,
+.footer-links li {
+    list-style: none;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-contact li i,
+.footer-links li a {
+    margin-right: 10px;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #555;
+}
+
+.footer-links li a:hover {
+    color: #000;
+}
+
+.footer-gallery {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-gallery img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.see-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ff9900;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.see-more:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    color: #ff9900;
+}

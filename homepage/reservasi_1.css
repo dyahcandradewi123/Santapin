@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Times New Roman', sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.header {
+    width: 100%;
+    background-color: #000;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2rem; /* Ukuran font besar */
+    color: rgb(251, 249, 249); /* Teks berwarna putih */
+    background-color: black; /* Background hitam */
+    padding: 20px; /* Tambahkan padding untuk memberi jarak di sekitar teks */
+    border-radius: 5px; /* Membuat sudut background lebih halus */
+    text-align: center;
+}
+
+/* Reservasi Container */
+.reservasi-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Form Group */
+.reservasi-group {
+    margin-bottom: 15px; /* Menambah jarak antar kolom */
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"] {
+    width: 100%; /* Semua input mengambil lebar penuh container */
+    padding: 10px 15px; /* Padding seragam */
+    font-size: 14px; /* Ukuran teks seragam */
+    border: 1px solid #ccc; /* Warna border seragam */
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box; /* Menghindari padding memengaruhi lebar */
+}
+
+input::placeholder {
+    color: #74726c; /* Warna placeholder */
+}
+
+input:focus {
+    border-color: #74726c; /* Warna border saat fokus */
+    background-color: #f9f9f9; /* Warna latar fokus */
+}
+
+/* Reservasi Button */
+.reservasi-btn {
+    background-color: #ff8c00; /* Oranye */
+    color: #fff; /* Teks putih */
+    padding: 10px;
+    width: 100%; /* Tombol lebar penuh */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reservasi-btn:hover {
+    background-color: #e07c00;
+}
+
+/* Text and Link */
+p {
+    font-size: 14px;
+}
+
+p a {
+    color: #ff8c00; /* Oranye */
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
